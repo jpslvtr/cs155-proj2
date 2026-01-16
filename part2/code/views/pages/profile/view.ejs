@@ -22,9 +22,10 @@
         <div id="profile"><%- result.profile %></div>
     <% } %>
 
-    <span id="bitbar_count" class="<%= result.bitbars %>" />
+    <% const uniqueId = 'bitbar_' + Date.now(); %>
+    <span id="<%= uniqueId %>" class="<%= result.bitbars %>" />
     <script type="text/javascript" nonce="<%= nonce %>">
-      var total = eval(document.getElementById('bitbar_count').className);
+      var total = parseInt(document.getElementById('<%= uniqueId %>').className);
       function showBitbars(bitbars) {
         document.getElementById("bitbar_display").innerHTML = bitbars + " bitbars";
         if (bitbars < total) {
